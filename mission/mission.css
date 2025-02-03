@@ -54,6 +54,11 @@ body.dark h2 {
     text-align: left; /* Align paragraphs to the left */
     margin: 1rem 0; /* Add spacing between paragraphs */
   }
+
+  main p,
+.does-list li {
+    font-size: 12pt; /* Ensures uniform font size */
+}
   
   main p em {
     font-style: italic; /* Italicize "The university does this by:" */
