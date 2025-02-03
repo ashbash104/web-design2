@@ -14,4 +14,7 @@ function changeTheme() {
     }
 }
 
+// Run this function as soon as the page loads
+document.addEventListener('DOMContentLoaded', changeTheme);
+
 themeSelector.addEventListener('change', changeTheme);
