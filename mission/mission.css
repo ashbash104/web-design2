@@ -67,9 +67,9 @@ body.dark h2 {
   }
   
   .does-list li {
-    margin-bottom: 1rem; /* Add space after each bullet point */
-  }
-  
+    font-size: 1rem; /* All text is the same size */
+    margin-bottom: 1rem;
+}
   /* Footer styles */
   footer .logo {
     display: block;
