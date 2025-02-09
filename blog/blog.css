@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: #473144;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: 'Lora', serif;
+  color: #AF1B3F;
+}
+
+header {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 4px solid #EFC69B;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+nav {
+    border-top: 2px solid #EFC69B;
+    border-bottom: 2px solid #EFC69B;
+    /*max-width: 800px;*/
+    margin: 0 auto;
+    list-style: none;
+    text-align: right;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+nav li {
+  font-size: 1.2rem;
+  padding: 20px 20px 20px 0;
+  color: #AF1B3F;
+}
+
+nav li:hover {
+  color: #473144;             /* Change color on hover */
+}
+
+.main-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: end;
+  list-style: none;
+  padding: 0;
+  border-top: 2px solid #EFC69B;
+  border-bottom: 2px solid #EFC69B;
+}
+
+.main-nav li {
+  padding: 15px 20px;
+  font-size: 1.2rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #AF1B3F;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #473144;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /*  grid-template-columns: 2fr 1fr;?*/
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.left-column, .right-column {
+  background-color: #fff;
+  border: 2px solid #EFC69B;
+  padding: 10px;
+}
+
+.center-column {
+    display: grid;
+    grid-template-columns: 1fr; /* Change to one column for vertical layout */
+    gap: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #EFC69B;
+  }
+  
+  .center-column article {
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #EFC69B;
+  }
+  
+  .center-column img {
+    width: 75%;
+  height: auto;
+  border: 2px solid #EFC69B;
+  margin: 0 auto;
+  display: block;
+  }
+  
+  .article-details {
+    text-align: left;
+    color: #473144;
+  }
+  
+  .article-content {
+    padding-left: 10px;
+  }
+  
+
+  .skiptocontent a {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #EFC69B;
+    color: #473144;
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 100;
+    transition: top 0.3s ease;
+  }
+  
+  .skiptocontent a:focus {
+    top: 0;
+  }
+  
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-top: 4px solid #EFC69B;
+  font-size: 0.9rem;
+}
