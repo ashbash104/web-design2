@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+  --primary-color: #52489c;
+  --secondary-color: #52489c;
+  --accent-color: #f45b69;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: 'Mooli', sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1, h2 {
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+    display: none;  /* Hide the nav by default on smaller screens */
+  }
+  
+  nav.visible {
+    display: block;  /* Show the nav when the 'visible' class is added */
+  }
+  
+  @media screen and (min-width: 1000px) {
+    nav {
+      display: flex;  /* Always show the nav on wider screens */
+    }
+  }
+  
