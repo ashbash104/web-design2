@@ -9,9 +9,14 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2 {
+h2 {
   font-family: 'Lora', serif;
   color: #AF1B3F;
+}
+
+h1 {
+  font-family: 'Lora', serif;
+  color: #473144;
 }
 
 header {
@@ -94,6 +99,14 @@ main {
   padding: 10px;
 }
 
+.left-column {
+  text-align: right;
+}
+
+.left-column article p {
+  font-size: 0.8rem; 
+}
+
 .center-column {
     display: grid;
     grid-template-columns: 1fr; /* Change to one column for vertical layout */
@@ -112,7 +125,7 @@ main {
   }
   
   .center-column img {
-    width: 75%;
+    width: 50%;
   height: auto;
   border: 2px solid #EFC69B;
   margin: 0 auto;
