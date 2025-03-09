@@ -1,0 +1,192 @@
+/* Import Font */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+
+/* Global Styles */
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: "Quicksand", sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: var(--text-dark);
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+header {
+    background-color: #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.search-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #999;
+    overflow: hidden;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-box img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Recipe Section */
+.recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+
+.recipe img {
+    border-radius: 5px;
+}
+
+.recipe-details {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tags {
+    margin-bottom: 10px;
+}
+
+.tag {
+    background: var(--secondary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+/* Hide description on small screens */
+.recipe-description {
+    display: none;
+}
+
+/* Rating */
+.rating {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.icon-star {
+    color: gold;
+}
+
+.icon-star-empty {
+    color: #bbb;
+}
+
+/* Footer */
+footer {
+    background-color: #ccc;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+/* Social Icons */
+.social {
+    margin-top: 10px;
+}
+
+.social a {
+    margin: 0 5px;
+}
+
+.social img {
+    width: 24px;
+    height: 24px;
+}
+
+/* --- Responsive Design --- */
+
+/* 600px: Change flex direction */
+@media (min-width: 600px) {
+    .recipe {
+        flex-direction: row;
+        align-items: flex-start;
+        width: 80%;
+    }
+
+    .recipe-details {
+        text-align: left;
+        margin-left: 15px;
+    }
+
+    .recipe-description {
+        display: block;
+    }
+}
+
+/* 960px: Set max width */
+@media (min-width: 960px) {
+    .recipe {
+        width: 60%;
+    }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=family=Amatic+SC&display=swap");
+:root {
+--primary-color: #1B98E0;
+--secondary-color: #59c3c3;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica,sans-serif;
+--secondary-font: "Amatic SC";
+}
