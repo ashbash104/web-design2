@@ -1,85 +1,87 @@
-/*GITHUB PUSH TEST*/
 /* Body styling */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Times New Roman", serif;
-    font-size: 20px;
-    line-height: 1.5;
-  }
-
-  body.dark {
-    background-color: #333;
-    color: white;
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", serif;
+  font-size: 25px;
+  line-height: 1.5;
+  font-weight: 500; /* normal */
 }
+
+/* ===== Dark mode ===== */
+/*
+body.dark {
+  background-color: #333;
+  color: white;
+}
+
 body.dark h2 {
-  color: #4C9FD4; /* Lighter blue for better contrast in dark theme */
+  color: #4C9FD4;
 }
+*/
 
-/* Content container styling */
+/* Content container */
 .content {
-margin: 0 auto;
-max-width: 600px; /* Set content width to 600px */
-padding: 1rem;
-font-weight: 175;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 1rem;
 }
 
 /* Header styles */
 .title {
-text-align: center; /* Center the title and university name */
-margin-bottom: 1.5rem; /* Add space between the title and the rest of the content */
-font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .title h1 {
-font-size: 2.5rem;
-font-weight: normal;
-letter-spacing: 2px; /* Add letter-spacing for title */
-text-transform: uppercase; /* Make the title all uppercase */
-margin-bottom: 0.5rem; /* Space below the title */
+  font-size: 2.5rem;
+  font-weight: 500; /* semi-bold */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
 .title h2 {
-font-size: 1rem; /* Size of "Brigham Young University-Idaho" */
-color: #238ed5; /* Set the subtitle color to #006EB6 */
-font-weight: normal;
-letter-spacing: 1px; /* Add letter-spacing for subtitle */
-text-transform: uppercase; /* Make the subtitle all uppercase */
-margin: 0;
-/*padding-bottom: 0.5rem; /* Add spacing below the subtitle */
-border-bottom: 1px solid #ccc; /* Thin line below the subtitle */
+  font-size: 1rem;
+  color: #238ed5;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
 }
 
-/* Main content styles */
+/* Main content */
 main p {
-font-size: 1rem;
-line-height: 1.5; /* 1.5 line spacing for paragraphs */
-text-align: left; /* Align paragraphs to the left */
-margin: 1rem 0; /* Add spacing between paragraphs */
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  margin: 1rem 0;
 }
 
 main p em {
-font-style: italic; /* Italicize "The university does this by:" */
+  font-style: italic;
 }
 
+/* Ordered list */
 .does-list {
-list-style-type: decimal; /* Number bullets */
-font-size: 12pt;
-margin: 1rem 0; /* Add space between list and other elements */
-/*padding-left: 0;*/ /* Remove default padding */
-text-align: left; /* Align list items to the left */
+  list-style-type: decimal;
+  font-size: 1rem; /* ≈ 12pt relative to 25px body */
+  margin: 1rem auto;
+  padding-left: 1.25rem; /* ensures numbers align cleanly */
+  max-width: 500px;
+  text-align: left;
 }
 
 .does-list li {
-font-size: 12pt; /* All text is the same size */
-margin-bottom: 1rem;
-}
-/* Footer styles */
-footer .logo {
-display: block;
-margin: 2rem auto 1rem; /* Center the logo and add spacing */
-max-width: 150px; /* Make the logo smaller */
-height: auto; /* Maintain aspect ratio */
+  margin-bottom: 1rem;
 }
 
-  
+/* Footer */
+footer .logo {
+  display: block;
+  margin: 2rem auto 1rem;
+  max-width: 150px;
+  height: auto;
+  text-align: center;
+}
