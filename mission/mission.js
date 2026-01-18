@@ -1,20 +1,35 @@
+//_________________________________________________________
+// * Mission Statement Page JavaScript
+// * Author: Ashlee Hart
+// * Javascript for the Light/Dark theme toggle on the 
+//   BYUI Mission Statement page.
+//__________________________________________________________
 const themeSelector = document.getElementById('theme-selector');
 
-function changeTheme() {
-    const currentTheme = themeSelector.value;
+function applyTheme(theme) {
     const body = document.body;
     const logo = document.getElementById('logo');
 
-    if (currentTheme === 'dark') {
+    if (theme === 'dark') {
         body.classList.add('dark');
+        body.classList.remove('light');
         logo.src = 'byui-logo_white.png';
     } else {
+        body.classList.add('light');
         body.classList.remove('dark');
         logo.src = 'byui-logo_blue.webp';
     }
 }
 
-// Run this function as soon as the page loads
-document.addEventListener('DOMContentLoaded', changeTheme);
+function changeTheme() {
+    if (themeSelector.value === '') return;
 
-themeSelector.addEventListener('change', changeTheme);
+    applyTheme(themeSelector.value);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    applyTheme('light');
+
+    themeSelector.addEventListener('change', changeTheme);
+});
+
