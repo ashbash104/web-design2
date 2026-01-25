@@ -1,6 +1,106 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
-:root {
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary-font);
+  color: var(--text-dark);
+}
+
+header, footer {
+  background-color: #266bb1;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1.5rem;
+}
+
+.menu-button {
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.75rem;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+nav a {
+    padding: 0.5rem;
+    color: rgb(255, 255, 255);
+    display: none;
+}
+nav a:hover {
+    text-decoration: none;
+    color: #616061;
+}
+
+main {
+  background-color: #bfc0c2;
+  padding: 1rem;
+}
+
+main a {
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  border:rgb(255, 255, 255) 0.5rem solid;
+  object-fit: cover;
+}
+
+.gallery {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+}
+
+@media screen and (min-width: 775px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+    }
+        .menu-button {
+        display: none;
+    }
+    nav a {
+        display: inline;
+        font-size: 2.5rem;
+    }
+    nav {
+        text-align: center;
+    }
+}
+
+/*IGNORE EVERYTHING BELOW THIS*/
+/* :root {
   --primary-color: #52489c;
   --secondary-color: #52489c;
   --accent-color: #f45b69;
@@ -75,14 +175,10 @@ nav {
   
   nav.visible {
     display: block;
-  }
+  } */
   
-  @media screen and (min-width: 1000px) {
-    nav {
-      display: flex; 
-    }
-  }
-  .skiptocontent a {
+
+  /* .skiptocontent a {
     position: absolute;
     top: -40px;
     left: 0;
@@ -97,6 +193,6 @@ nav {
     top: 0;
     outline: none;
   }
-  
+   */
   
   

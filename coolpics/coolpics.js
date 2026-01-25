@@ -1,4 +1,4 @@
-// Select the menu button and the navigation
+/*// Select the menu button and the navigation
 const menuButton = document.querySelector('.menu-button');
 const navLinks = document.querySelector('nav');  // Assuming you have a nav element for your links
 
@@ -12,4 +12,4 @@ window.addEventListener('resize', () => {
   if (window.innerWidth >= 1000) {
     navLinks.classList.remove('visible');  // Ensure the nav is always visible on wider screens
   }
-});
+});*/
