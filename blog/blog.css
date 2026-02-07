@@ -116,7 +116,7 @@ main {
   min-width: 0;
 }
 
-.skiptocontent a {
+.skiptocontent {
   background: #e77e23;
   height: 30px;
   left: 50%;
@@ -126,7 +126,7 @@ main {
   transition: transform 0.3s;
 }
 
-.skiptocontent a:focus {
+.skiptocontent:focus {
   transform: translateY(0%);
 }
 
