@@ -117,10 +117,11 @@ main {
 }
 
 .skiptocontent {
-  background: #e77e23;
-  height: 30px;
+  background: #e28e92;
+  color: #fff;
+  font-weight: 700;
   left: 50%;
-  padding: 8px;
+  padding: 4px;
   position: absolute;
   transform: translateY(-100%);
   transition: transform 0.3s;
