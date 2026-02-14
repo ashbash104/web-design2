@@ -1,3 +1,4 @@
+
 const articles = [
 	{
 		id: 1,
@@ -9,7 +10,7 @@ const articles = [
 		imgAlt: 'Book cover for Septimus Heap 1',
 		ages: '10-14',
 		genre: 'Fantasy',
-		stars: '****'
+		stars: '⭐⭐⭐⭐'
 	},
 	{
 		id: 2,
@@ -23,5 +24,59 @@ const articles = [
 		ages: '12-16',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id: 3,
+		title: "Belgariad Book One: Pawn of Prophecy",
+		date: "Feb 12, 2022",
+		description:
+		"A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+		imgSrc:
+		"https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+		imgAlt: "Book cover for Pawn of Prophecy",
+		ages: "12-16",
+		genre: "Fantasy",
+		stars: "⭐⭐⭐⭐⭐"
 	}
-]
+];
+
+const main = document.querySelector('#main');
+
+articles.forEach(article => {
+
+  const ratingSection = document.createElement('section');
+  ratingSection.className = 'rating';
+
+  const ratingArticle = document.createElement('article');
+
+  ratingArticle.innerHTML = `
+    <p>${article.date}</p>
+    <p>${article.ages}</p>
+    <p>${article.genre}</p>
+    <p>
+      <span aria-label="${article.stars.length} out of 5 stars" role="img">
+        ${article.stars}
+      </span>
+    </p>
+  `;
+
+  ratingSection.appendChild(ratingArticle);
+
+
+  const bookSection = document.createElement('section');
+  bookSection.className = 'book';
+
+  const bookArticle = document.createElement('article');
+
+  bookArticle.innerHTML = `
+    <h2>${article.title}</h2>
+    <img src="${article.imgSrc}" alt="${article.imgAlt}">
+    <p>${article.description}</p>
+  `;
+
+  bookSection.appendChild(bookArticle);
+
+  main.appendChild(ratingSection);
+  main.appendChild(bookSection);
+
+});

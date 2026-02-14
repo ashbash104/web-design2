@@ -114,6 +114,8 @@ main {
 .book,
 .rating {
   min-width: 0;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .skiptocontent {
@@ -137,6 +139,8 @@ footer {
   padding: 10px;
   background-color: #f9f9f9;
   border-top: 2px solid #EFC69B;
+  border-bottom: 2px solid #EFC69B;
+  margin-bottom: 20px;
   font-size: 0.9rem;
 }
 
