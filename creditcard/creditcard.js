@@ -1,6 +1,6 @@
 //Valid card number: 1234123412341234
-    const creditCardContainer = document.querySelector('#creditCardNumberContainer');
-    const creditInput = document.querySelector('#creditCardNumberContainer input');
+    const creditCardContainer = document.querySelector('#card-number-field');
+    const creditInput = document.querySelector('#cardnumber');
 
 
 //validations and errors
@@ -19,16 +19,13 @@ function submitHandler(event) {
   let errorMsg = '';
 	displayError('');
 
-  let cardNumber = document.querySelector('#creditCardNumber');
+  let cardNumber = document.querySelector('#cardnumber');
   const cardNum = cardNumber.value.trim();
-  if (paymentSelect.value === 'creditCard') {
-    // Check if it's numeric and valid in one go
-    
-      if (!/^\d{16}$/.test(cardNum)) {
-      errorMsg += 'Card number must be 16 digits\n';
-      } else if (!isCardNumberValid(cardNum)) {
-        errorMsg += 'Card number is not valid\n';
-      }
+    if (!/^\d{16}$/.test(cardNum)) {
+    errorMsg += 'Card number must be 16 digits\n';
+    } else if (!isCardNumberValid(cardNum)) {
+    errorMsg += 'Card number is not valid\n';
+    }
     
     //check date
     const expYear = Number(document.querySelector('#year').value);   
@@ -39,7 +36,6 @@ function submitHandler(event) {
     ) {
         errorMsg += 'Card is expired\n';
     }
-  }
 
     if (errorMsg !== '') {
 		// there was an error. stop the form and display the errors.
@@ -47,8 +43,8 @@ function submitHandler(event) {
 		return;
     }
     // Success: show a confirmation message
-    const formContainer = document.getElementById('checkoutForm');
+    const formContainer = document.getElementsByClassName('card-form');
     formContainer.innerHTML = '<h2>Thank you for providing your payment method.</h2>';
 }
   
-document.querySelector('#checkoutForm').addEventListener('submit', submitHandler)
+document.querySelector('.card-form').addEventListener('submit', submitHandler)
