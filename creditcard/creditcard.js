@@ -47,4 +47,5 @@ function submitHandler(event) {
     formContainer.innerHTML = '<h2>Thank you for providing your payment method.</h2>';
 }
   
-document.querySelector('.card-form').addEventListener('submit', submitHandler)
+document.querySelector('.card-form')
+  .addEventListener('submit', submitHandler);
