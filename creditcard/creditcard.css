@@ -9,6 +9,8 @@ body {
 
 .form-wrapper {
   padding: 2rem;
+  display: grid;
+  place-items: center;
 }
 .card-front {
   z-index: 2;
@@ -41,13 +43,14 @@ body {
 }
 
 #cvv {
-  width: 22%;
+  width: 30%;
 }
 
 .cvv-field {
   grid-row: 3/4;
   grid-column: -2/-1;
   justify-self: left;
+  margin-left: 1.5rem;
   
 }
 
@@ -56,9 +59,8 @@ body {
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr 3fr 1fr 1fr;
   gap: 1rem;
-  align-items: center;
   font-size: 0.8rem;
-  width: 75%;
+  width: 40%;
 }
 
 .card-header {
@@ -92,9 +94,8 @@ body {
 }
 
 .exp-inputs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  
+  width: 450%;
+  margin-left: 1rem;
 }
 
 #month, #year {
@@ -134,4 +135,5 @@ input[type="text"] {
   background: rgb(227, 226, 226);
   cursor: pointer;
   box-shadow: 5px 5px 5px rgba(9, 9, 9, 0.3);
+  margin-top: 1.2rem;
 }
