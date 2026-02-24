@@ -2,35 +2,85 @@ body {
   background-color: #f8f8f8;
   font-family: Arial, sans-serif;
   display: grid;
-  justify-content: center;
-  align-items: center;
+  place-items: center;
   height: 100vh;
   margin: 0;
 }
 
 .form-wrapper {
-  background-color: rgb(209, 209, 209);
   padding: 2rem;
+}
+.card-front {
+  grid-row: 1/3;
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: rgb(209, 209, 209);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px rgba(9, 9, 9, 0.3);
+}
+.card-back {
+  grid-row: -4/-1;
+  grid-column: -3/-1;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 2fr 1fr 2fr;
+  background-color: rgb(209, 209, 209);
+  padding: 1rem;
   border-radius: 8px;
   box-shadow: 5px 5px 5px rgba(9, 9, 9, 0.3);
 }
 
-.card-back-wrapper {
-  display: grid;
-  margin-top: -50px;
+#cvv {
+  width: 22%;
+}
+
+.cvv-field {
+  grid-row: 3/4;
+  grid-column: -2/-1;
+  justify-self: left;
+  
 }
 
 .card-form {
   display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr 1fr;
   gap: 1rem;
   position: relative;
+  align-items: left;
 }
 
 .card-header {
-  display: grid;
+  grid-row: 1/2;
+  grid-column: 1/3;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+}
+
+.card-number-field {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.card-details-row {
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+
+#cardExpiration {
+  grid-row: 3/4;
+  grid-column: 2/3;
+  width: 10%;
+  display: inline;
+}
+
+#month, #year {
+  width: 8%;
+  display: inline-block;
 }
 
 .total {
@@ -38,7 +88,14 @@ body {
 }
 
 .chip {
+  justify-self: end;
   border-radius: 5px;
+  font-size: 2rem;
+  margin-left: 80%;
+}
+
+.chip, .total {
+  display: inline;
 }
 
 input[type="text"] {
@@ -51,67 +108,31 @@ input[type="text"] {
 }
 
 .card-details-row {
-  display: flex;
+
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.card-holder,
-.expiration {
-  flex: 1;
-}
-
-.expiration-fields {
-  display: flex;
-  gap: 0.5rem;
-}
-
 .magnetic-strip {
-  height: 40px;
+  grid-row: 1/2;
+  grid-column: 1/3;
+  height: 50%;
   background-color: #333;
   margin-bottom: 1rem;
+  margin-top: 0.5rem;;
   border-radius: 4px;
 }
 
 .submit-button {
+  grid-row: 4/5;
+  grid-column: 3/4;
   width: 80px;
+  height: 40px;
   padding: 8px;
   font-size: 14px;
   border: 1px solid black;
   border-radius: 5px;
-  background: white;
+  background: rgb(227, 226, 226);
   cursor: pointer;
-}
-
-/* Make both cards the same size */
-/* .card {
-  width: 400px;
-  height: 250px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  position: absolute;
-}
-
-/* Back card shifted slightly to the right */
-/*.card-back {
-  background: #d9d9d9;
-  z-index: 0;
-  left: 20px;
-}*./
-
-/* Front card appears in front */
-/*.card-front {
-  background: #f2f2f2;
-  z-index: 1;
-  left: 0;
-}*/
-
-/* Narrow, right-aligned Submit button */
-.submit-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 270px; /* distance below the cards */
-  width: 400px; /* match card width */
-  position: relative;
-  left: 20px; /* aligns to the back card's right edge */
+  box-shadow: 5px 5px 5px rgba(9, 9, 9, 0.3);
 }
