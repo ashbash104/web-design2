@@ -137,3 +137,18 @@ input[type="text"] {
   box-shadow: 5px 5px 5px rgba(9, 9, 9, 0.3);
   margin-top: .5rem;
 }
+
+.card-form h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+.card-form h2::before {
+  content: "✓ ";
+  color: green;
+  font-weight: bold;
+}
