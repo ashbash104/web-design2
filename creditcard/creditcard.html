@@ -32,10 +32,12 @@
             <input type="text" id="cardholder" name="cardholder" placeholder="John Doe" required />
           </div>
           <div id="cardExpiration">
-            <label for="expirationDate">EXPIRATION</label>
-            <div></div>
-            <input type='text' id='month' name="expMonth" placeholder="MM" aria-labelledby="expirationDate">
-            <input type='text' id='year' name="expYear" placeholder="YY" aria-labelledby="expirationDate">
+            <label for="month">EXPIRATION</label>
+
+            <div class="exp-inputs">
+              <input type="text" id="month" name="expMonth" placeholder="MM">
+              <input type="text" id="year" name="expYear" placeholder="YY">
+            </div>
           </div>
         </div>
       </section>

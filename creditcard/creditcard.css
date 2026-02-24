@@ -34,7 +34,8 @@ body {
   width: 50%;
   aspect-ratio: 2/1;
   background-color: rgb(209, 209, 209);
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   border-radius: 8px;
   box-shadow: 5px 5px 5px rgba(9, 9, 9, 0.3);
 }
@@ -80,15 +81,20 @@ body {
 
 .card-details-row {
   grid-row: 3/4;
-
-  display: inline;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
 }
 
 #cardExpiration {
-  grid-row: 3/4;
-  grid-column: 2/3;
-  width: 10%;
-  display: inline;
+  grid-column: 2 / 3;
+  width: 100%;
+}
+
+.exp-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
 }
 
 #month, #year {
