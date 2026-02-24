@@ -135,5 +135,5 @@ input[type="text"] {
   background: rgb(227, 226, 226);
   cursor: pointer;
   box-shadow: 5px 5px 5px rgba(9, 9, 9, 0.3);
-  margin-top: 1.2rem;
+  margin-top: .5rem;
 }
