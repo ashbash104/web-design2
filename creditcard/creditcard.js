@@ -32,7 +32,7 @@ function submitHandler(event) {
     const expMonth = Number(document.querySelector('#month').value);
     const currentDate = new Date()
 
-    if (2000 + expYear < currentDate.getFullYear() || (2000 + expYear === currentDate.getFullYear() && expMonth <= (currentDate.getMonth()))
+    if (2000 + expYear < currentDate.getFullYear() || (2000 + expYear === currentDate.getFullYear() && expMonth <= (currentDate.getMonth()) + 1)
     ) {
         errorMsg += 'Card is expired\n';
     }
@@ -43,7 +43,7 @@ function submitHandler(event) {
 		return;
     }
     // Success: show a confirmation message
-    const formContainer = document.getElementsByClassName('card-form');
+    const formContainer = document.querySelector('.card-form');
     formContainer.innerHTML = '<h2>Thank you for providing your payment method.</h2>';
 }
   
