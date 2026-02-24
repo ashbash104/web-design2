@@ -1,7 +1,7 @@
 body {
-  background-color: #1a1a1a;
+  background-color: #f8f8f8;
   font-family: Arial, sans-serif;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -9,17 +9,14 @@ body {
 }
 
 .form-wrapper {
-  background-color: white;
+  background-color: rgb(209, 209, 209);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px rgba(9, 9, 9, 0.3);
 }
 
 .card-back-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: fit-content;
+  display: grid;
   margin-top: -50px;
 }
 
@@ -30,7 +27,7 @@ body {
 }
 
 .card-header {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
@@ -41,9 +38,6 @@ body {
 }
 
 .chip {
-  width: 40px;
-  height: 25px;
-  background: orange;
   border-radius: 5px;
 }
 
@@ -90,7 +84,7 @@ input[type="text"] {
 }
 
 /* Make both cards the same size */
-.card {
+/* .card {
   width: 400px;
   height: 250px;
   border-radius: 12px;
@@ -99,18 +93,18 @@ input[type="text"] {
 }
 
 /* Back card shifted slightly to the right */
-.card-back {
+/*.card-back {
   background: #d9d9d9;
   z-index: 0;
-  left: 20px; /* stagger to the right */
-}
+  left: 20px;
+}*./
 
 /* Front card appears in front */
-.card-front {
+/*.card-front {
   background: #f2f2f2;
   z-index: 1;
   left: 0;
-}
+}*/
 
 /* Narrow, right-aligned Submit button */
 .submit-container {
