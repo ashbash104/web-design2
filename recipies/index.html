@@ -1,73 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Book</title>
-    
-    <link rel="stylesheet" href="recipes.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+</style>
+ <meta charset="UTF-8">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Recipe Book">
+ <meta name="description" content="An online recipe book featuring a collection of delicious recipes with easy-to-follow instructions and beautiful images. Perfect for home cooks looking to explore new dishes!">
+ <meta name="author" content="Ashlee Hart">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta property="og:url" content="ashbash104.github.io/wdd131/recipes">
+
+<link rel="icon" href="/favicon.ico">
+<!-- 
+<script src="main.js" defer></script> -->
+<link rel="stylesheet" href="recipes.css">
+
 </head>
 <body>
     <header>
-        <h1>Recipe Book</h1>
-        <div class="search-container">
-            <label for="search" class="search-label">Find a Recipe!</label>
-            <div class="search-box">
-                <input type="text" id="search" placeholder="Search recipes...">
-                <button type="submit" aria-label="Search">
-                    <img src="images/search.svg" alt="">
-                </button>
-            </div>
+        <div class="top-bar">
+            <img src="images/recipe-book.png" alt="Recipe Book Icon" class="logo">
+            <h1>Recipe Book</h1>
         </div>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Find a recipe">
+            <button type="submit" aria-label="Search">
+                <img src="images/search.svg" alt="">
+            </button>
+        </div>
+        <hr>
     </header>
 
     <main>
         <section class="recipe">
             <img src="images/apple-crisp.jpg" alt="Apple Crisp">
             <div class="recipe-details">
-                <h1>Recipe Page</h1>
-                <div id="recipe"></div>
-
-                <script src="register.js"></script>
+                <button class="category" aria-label="Category: Dessert">Dessert</button>
+                <h1>Apple Crisp</h1>
+                <div id="recipe"></div>          
                 <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star-empty">☆</span>
                 </span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p style="font-size: 0.6em;">
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+
+            <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="Your Title">
+            <meta property="og:description" content="Your Description">
+            <meta property="og:url" content="Your URL">
+            <meta property="og:image" content="social-preview-image.png">
+
+            <!-- X Card -->
+            <meta name="twitter:card" content="Social Preview Image">
+            <meta name="twitter:title" content="Your Title">
+            <meta name="twitter:description" content="Your Description">
+            <meta name="twitter:image" content="social-preview-image.png">
+
+            <!-- One favicon (ICO works everywhere) -->
+            <link rel="icon" href="/favicon.ico">
+
+            <!-- One Apple Touch Icon (iOS home screen) -->
+            <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        </div>
+        <p style="font-size: 0.6em;">  
             <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
         </p>
-        <div class="social">
-            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
-            <a href="#"><img src="images/instagram_icon.svg" alt="Instagram"></a>
-            <a href="#"><img src="images/youtube_icon.svg" alt="YouTube"></a>
-            <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest"></a>
-            <!-- Open Graph Meta Tags -->
-            <meta property="og:title" content="Delicious Recipes - Your Ultimate Recipe Book">
-            <meta property="og:type" content="website" />
-            <meta property="og:description" content="Explore a collection of delicious recipes with easy-to-follow instructions and beautiful images. Perfect for home cooks!">
-            <meta property="og:image" content="https://yourwebsite.com/images/featured-recipe.jpg">
-            <meta property="og:url" content="https://yourwebsite.com">
-
-            <!-- Twitter Meta Tags -->
-            <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:title" content="Delicious Recipes - Your Ultimate Recipe Book">
-            <meta name="twitter:description" content="Explore a collection of delicious recipes with easy-to-follow instructions and beautiful images. Perfect for home cooks!">
-            <meta name="twitter:image" content="https://yourwebsite.com/images/featured-recipe.jpg">
-            <meta name="twitter:url" content="https://yourwebsite.com">
-
-        </div>
-        <p>©2023</p>
     </footer>
 </body>
 </html>
-
-<!--Source: ChatGPT for description and debugging-->

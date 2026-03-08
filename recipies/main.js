@@ -1,5 +1,3 @@
-import { recipes } from './recipes.mjs';
-
 document.addEventListener('DOMContentLoaded', () => {
     const recipeList = document.getElementById('recipe-list');
 
