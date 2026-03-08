@@ -220,7 +220,7 @@ footer {
     }
 
     footer {
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
         font-size: 1.25em;
@@ -231,13 +231,5 @@ footer {
     .social {
         display: flex;
         flex-direction: row;
-    }
-
-    .social p {
-        order: -1;
-    }
-
-    .social a {
-        order: 1;
     }
 }
