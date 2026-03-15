@@ -112,12 +112,12 @@ let button = document.querySelector('button');
 button.addEventListener('click', search);
 
 /* for the enter key to work on search - not just clicking the search button */
-input.addEventListener('keypress', handleEnter);
-function handleEnter(event) {
-  if (event.key === 'Enter') {
-    search();
-  }
-}
+// input.addEventListener('keypress', handleEnter);
+// function handleEnter(event) {
+//   if (event.key === 'Enter') {
+//     search();
+//   }
+// }
 
 let randomNum = Math.floor(Math.random() * hikes.length);
 console.log(randomNum);
@@ -158,7 +158,7 @@ function hikesTemplate(hike) {
 
 function renderHike(hike) {
     let html = hikesTemplate(hike);
-    hikeContainer.innerHTML += html
+    hikeContainer.innerHTML += html;
 }
 
 function init() {
