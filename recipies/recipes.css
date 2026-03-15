@@ -208,11 +208,12 @@ footer {
 @media (min-width: 650px) {
 
     /* Recipe flips to row layout */
-    .recipe {
-        flex-direction: row;
-        justify-content: left;
-        width: 78%;
-    }
+.recipe {
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+    width: 78%;
+}
 
     .recipe img {
         width: 45%;
