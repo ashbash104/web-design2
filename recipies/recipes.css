@@ -85,14 +85,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%; /* match the hr directly */
+    width: 80%;
     margin-top: 10px;
 }
 
 .search-box {
     display: flex;
     align-items: center;
-    width: 100%; /* fill the nav, which is already 80% */
+    width: 100%;
     background: white;
     border-radius: 10px;
     border: 2px solid #101010;
