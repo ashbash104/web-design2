@@ -168,20 +168,18 @@ main {
 /* Rating */
 .rating {
     display: flex;
+    align-items: center;
     font-size: 1.2em;
     margin-bottom: 5px;
 }
 
 .icon-star {
     color: gold;
-    align-self: center;
 }
 
 .icon-star-empty {
     color: #1a1a1a;
     font-size: 1.5em;
-    align-self: flex-end;
-    margin-bottom: 0;
 }
 
 /* Footer */
