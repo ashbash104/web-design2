@@ -53,15 +53,6 @@ header {
     margin-bottom: 5px;
 }
 
-.search-box {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    background: white;
-    border-radius: 10px;
-    border: 2px solid #101010;
-    overflow: hidden;
-}
 
 .search-box input {
     width: 100%;
@@ -94,9 +85,18 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    width: 100%;
+    width: 80%; /* match the hr directly */
     margin-top: 10px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 100%; /* fill the nav, which is already 80% */
+    background: white;
+    border-radius: 10px;
+    border: 2px solid #101010;
+    overflow: hidden;
 }
 
 /* Recipe Section */
