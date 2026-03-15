@@ -281,20 +281,89 @@ const recipes = [
 	}
 ]
 
-document.addEventListener('DOMContentLoaded', () => {
-    const recipeList = document.getElementById('recipe-list');
+function search() {
+    let recipeQuery = document.querySelector('#search').value;
 
-    recipes.forEach(recipe => {
-        const recipeCard = document.createElement('article');
-        recipeCard.classList.add('recipe-card');
+    let filteredRecipes = recipes.filter(function(recipe){
+        return (
+            recipe.image.toLowerCase().includes(recipeQuery.toLowerCase()) ||
+            recipe.name.toLowerCase().includes(recipeQuery.toLowerCase()) ||
+            recipe.description.toLowerCase().includes(recipeQuery.toLowerCase()) || 
+            recipe.tags.find(tag => tag.toLowerCase().includes(recipeQuery.toLowerCase()))
+        );
+    })
 
-        recipeCard.innerHTML = `
-            <h2>${recipe.name}</h2>
-            <img src="${recipe.image}" alt="${recipe.name}">
-            <p><strong>Cook Time:</strong> ${recipe.cookTime}</p>
+    function compareRecipes(a,b) {
+    if (a.rating < b.rating) {
+        return -1;
+    } else if (a.rating > b.rating) {
+        return 1;
+    }
+    return 0;
+    }
+
+    let sortedRecipes = filteredRecipes.sort(compareRecipes);
+
+    // clear out any previous content
+    recipeContainer.innerHTML = '';
+    // output onto screen
+    sortedRecipes.forEach(function(recipe){
+      renderRecipe(recipe);
+    })
+}
+
+let recipeContainer = document.querySelector('#recipes');
+
+let button = document.querySelector('button');
+
+button.addEventListener('click', search);
+
+let randomNum = Math.floor(Math.random() * recipes.length);
+console.log(randomNum);
+
+function tagTemplate(tags) {
+    return tags.map((tag)=> `<button>${tag}</button>`).join(' ');
+}
+
+function ratingTemplate(rating) {
+        let html = `<span
+    class="rating"
+	role="img"
+	aria-label="Rating: ${rating} out of 5 stars"
+>  Rating:`
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        html += `<span aria-hidden="true" class="icon-star"> ⭐</span>`
+      } else {
+        html += `<span aria-hidden="true" class="icon-star-empty"> ☆</span>`
+      }			
+    }
+    html += `</span>`
+    return html
+}
+
+function recipeTemplate(recipe) {
+    return `
+    <section class="recipe">
+        <img src="${recipe.image}" alt="${recipe.name}">
+        <div class="recipe-details">
+            <button class="category" aria-label="Category: ${recipe.tags.join(', ')}">${recipe.tags.join(', ')}</button>
+            <h1>${recipe.name}</h1>
+            <div id="recipe"></div>     
+            ${ratingTemplate(recipe.rating)}
             <p>${recipe.description}</p>
-        `;
+        </div>
+    </section>
+    `
+}
 
-        recipeList.appendChild(recipeCard);
-    });
-});
+function renderRecipe(recipe) {
+    let html = recipeTemplate(recipe);
+    recipeContainer.innerHTML += html;
+}
+
+function init() {
+    renderRecipe(recipes[randomNum]);
+}
+
+init();

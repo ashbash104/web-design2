@@ -1,4 +1,3 @@
-
 const hikes = [
   {
     name: "Bechler Falls",
