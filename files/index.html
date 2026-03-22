@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ashlee Hart — Portfolio</title>
+
+  <!-- Fonts: Syne (headings) + DM Mono (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     HEADER
+════════════════════════════════════════ -->
+<header>
+  <div class="header-grid">
+    <div>
+      <p class="eyebrow">Portfolio — 2025</p>
+      <h1>Ashlee<span>Hart.</span></h1>
+    </div>
+    <div class="header-meta">
+      <div><span class="status-dot"></span>Available for work</div>
+      <div>San Francisco, CA</div>
+      <div>ashlee@ashleehartdev.com</div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════
+     NAV
+════════════════════════════════════════ -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     STATS BAR
+════════════════════════════════════════ -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat">
+      <span class="stat-value" id="stat-total">0</span>
+      <span class="stat-label">Projects</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value" id="stat-live">0</span>
+      <span class="stat-label">Live</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value" id="stat-tags">0</span>
+      <span class="stat-label">Technologies</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value" id="stat-years">0</span>
+      <span class="stat-label">Years Active</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     FILTER BAR
+════════════════════════════════════════ -->
+<div class="filter-section" id="projects">
+  <div class="filter-inner">
+    <span class="filter-label">Filter //</span>
+    <div class="filter-tags" id="filter-tags"></div>
+    <span class="results-count" id="results-count"></span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PROJECT GRID
+════════════════════════════════════════ -->
+<main class="main">
+  <div class="project-grid" id="project-grid"></div>
+</main>
+
+<!-- ══════════════════════════════════════
+     ABOUT + SKILLS
+════════════════════════════════════════ -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div>
+      <p class="section-label">// About</p>
+      <p class="about-text">
+        I'm a front-end developer based in San Francisco, CA. I build clean,
+        accessible interfaces and enjoy working at the crossover between design
+        and engineering. I care about the details — the interactions most people
+        don't notice but everyone feels.
+      </p>
+      <p class="about-text" style="margin-top: 1rem;">
+        Currently open to full-time roles and freelance projects. Let's build
+        something great together.
+      </p>
+    </div>
+    <div id="skills">
+      <p class="section-label">// Skills</p>
+      <ul class="skill-list" id="skill-list"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CONTACT / SOCIAL
+════════════════════════════════════════ -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <p class="section-label">// Connect</p>
+    <h2 class="contact-heading">Let's work together.</h2>
+    <p class="contact-sub">Reach out via email or find me on these platforms:</p>
+    <div class="social-links">
+      <a href="https://github.com" target="_blank" class="social-btn">
+        <span class="social-icon">⌥</span> GitHub
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="social-btn">
+        <span class="social-icon">in</span> LinkedIn
+      </a>
+      <a href="mailto:ashlee@ashleehartdev.com" class="social-btn social-btn--accent">
+        <span class="social-icon">✉</span> Email Me
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <span>© 2025 Ashlee Hart</span>
+  <div class="footer-links">
+    <a href="https://github.com" target="_blank">GitHub</a>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    <a href="mailto:ashlee@ashleehartdev.com">Email</a>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+<script>
+// ════════════════════════════════════════════
+//  DATA — Projects as objects inside an array
+// ════════════════════════════════════════════
+const projects = [
+  {
+    id: 1,
+    title: "Portfolio Site",
+    description: "This portfolio! Built with semantic HTML, CSS custom properties, and vanilla JavaScript. Includes dynamic filtering, scroll animations, and a responsive layout.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    year: 2025,
+    status: "live",
+    github: "https://github.com"
+  },
+  {
+    id: 2,
+    title: "Weather Dashboard",
+    description: "A responsive weather app that fetches live data from a public API. Displays current conditions, a 5-day forecast, and location search.",
+    tags: ["JavaScript", "CSS", "API"],
+    year: 2025,
+    status: "live",
+    github: "https://github.com"
+  },
+  {
+    id: 3,
+    title: "Recipe Finder",
+    description: "Search and save recipes using the Spoonacular API. Includes dietary filters, ingredient-based search, and a favourites list stored in localStorage.",
+    tags: ["JavaScript", "HTML", "CSS"],
+    year: 2024,
+    status: "case",
+    github: "https://github.com"
+  },
+  {
+    id: 4,
+    title: "To-Do App",
+    description: "A fully accessible task manager with drag-and-drop reordering, priority tagging, and persistent state via localStorage.",
+    tags: ["JavaScript", "CSS", "HTML"],
+    year: 2024,
+    status: "live",
+    github: "https://github.com"
+  },
+  {
+    id: 5,
+    title: "Quiz Game",
+    description: "A timed trivia quiz pulling from the Open Trivia API. Tracks score, shows answer explanations, and stores a high-score leaderboard.",
+    tags: ["JavaScript", "API", "CSS"],
+    year: 2024,
+    status: "case",
+    github: "https://github.com"
+  },
+  {
+    id: 6,
+    title: "Blog CMS",
+    description: "A lightweight content management interface. Supports markdown authoring, image uploads, and a tag-based post filter. Currently in active development.",
+    tags: ["JavaScript", "HTML", "CSS"],
+    year: 2025,
+    status: "wip",
+    github: null
+  }
+];
+
+// Skills array of objects
+const skills = [
+  { name: "HTML & Semantic Markup", level: 95 },
+  { name: "CSS / Layouts & Animation", level: 90 },
+  { name: "JavaScript (ES6+)", level: 85 },
+  { name: "Responsive Design", level: 88 },
+  { name: "Git & Version Control", level: 78 },
+  { name: "Figma / UI Design", level: 65 }
+];
+
+// ════════════════════════════════════════
+//  STATE
+// ════════════════════════════════════════
+let activeFilter = "All";
+
+// ════════════════════════════════════════
+//  UTILITY FUNCTIONS
+// ════════════════════════════════════════
+
+// Extract all unique tags using reduce
+function getAllTags(projectList) {
+  const allTags = projectList.reduce((acc, project) => {
+    return acc.concat(project.tags);
+  }, []);
+  return ["All", ...new Set(allTags)];
+}
+
+// Return status label + CSS class — conditional branching
+function getStatusInfo(status) {
+  if (status === "live")  return { label: "Live",        cssClass: "status-live" };
+  if (status === "wip")   return { label: "In Progress", cssClass: "status-wip" };
+  if (status === "case")  return { label: "Case Study",  cssClass: "status-case" };
+  return { label: "Unknown", cssClass: "" };
+}
+
+// Filter projects by active tag
+function getFilteredProjects() {
+  if (activeFilter === "All") return projects;
+  return projects.filter(p => p.tags.includes(activeFilter));
+}
+
+// ════════════════════════════════════════
+//  RENDER: STATS  (uses .filter + .reduce)
+// ════════════════════════════════════════
+function renderStats() {
+  const liveCount = projects.filter(p => p.status === "live").length;
+  const tagCount  = getAllTags(projects).length - 1; // exclude "All"
+  const yearCount = projects.reduce((acc, p) => { acc.add(p.year); return acc; }, new Set()).size;
+
+  // DOM interaction — select elements and modify their content
+  document.getElementById("stat-total").textContent = projects.length;
+  document.getElementById("stat-live").textContent  = liveCount;
+  document.getElementById("stat-tags").textContent  = tagCount;
+  document.getElementById("stat-years").textContent = yearCount + "+";
+}
+
+// ════════════════════════════════════════
+//  RENDER: FILTER BUTTONS
+// ════════════════════════════════════════
+function renderFilters() {
+  const container = document.getElementById("filter-tags");
+  const tags = getAllTags(projects);
+
+  // .map() array of tags → button HTML strings
+  container.innerHTML = tags.map(tag => `
+    <button class="tag-btn ${tag === activeFilter ? "active" : ""}" data-tag="${tag}">
+      ${tag}
+    </button>
+  `).join("");
+
+  // Listen for click events on each button
+  container.querySelectorAll(".tag-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+      activeFilter = this.dataset.tag;
+      renderFilters();
+      renderProjects();
+    });
+  });
+}
+
+// ════════════════════════════════════════
+//  RENDER: PROJECT CARDS  (uses .map)
+// ════════════════════════════════════════
+function renderProjects() {
+  const grid     = document.getElementById("project-grid");
+  const filtered = getFilteredProjects();
+  const counter  = document.getElementById("results-count");
+
+  // Conditional — singular vs plural label
+  const noun = filtered.length === 1 ? "project" : "projects";
+  counter.innerHTML = `Showing <span>${filtered.length}</span> ${noun}`;
+
+  // Conditional — show empty state when nothing matches
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-icon">◻</div>
+        <p>No projects tagged <strong>"${activeFilter}"</strong>.</p>
+        <button onclick="resetFilter()">Clear filter</button>
+      </div>`;
+    return;
+  }
+
+  // .map() each project object → card HTML
+  grid.innerHTML = filtered.map((project, index) => {
+    const { label, cssClass } = getStatusInfo(project.status);
+    const tagHTML = project.tags.map(t => `<span class="card-tag">${t}</span>`).join("");
+    const githubBtn = project.github
+      ? `<a href="${project.github}" target="_blank" class="card-github" onclick="event.stopPropagation()">View on GitHub ↗</a>`
+      : `<span class="card-github card-github--disabled">Repo coming soon</span>`;
+
+    return `
+      <div class="project-card" style="animation-delay:${index * 60}ms" data-id="${project.id}">
+        <div class="card-header">
+          <span class="card-year">${project.year}</span>
+          <span class="card-status ${cssClass}">${label}</span>
+        </div>
+        <h2 class="card-title">${project.title}</h2>
+        <p class="card-desc">${project.description}</p>
+        <div class="card-tags">${tagHTML}</div>
+        <div class="card-footer">${githubBtn}</div>
+        <span class="card-arrow">↗</span>
+      </div>`;
+  }).join("");
+
+  // Event listener on each card
+  grid.querySelectorAll(".project-card").forEach(card => {
+    card.addEventListener("click", function () {
+      handleCardClick(parseInt(this.dataset.id));
+    });
+  });
+}
+
+// ════════════════════════════════════════
+//  RENDER: SKILLS
+// ════════════════════════════════════════
+function renderSkills() {
+  const list = document.getElementById("skill-list");
+
+  list.innerHTML = skills.map(skill => `
+    <li class="skill-item">
+      <span>${skill.name}</span>
+      <div class="skill-bar-track">
+        <div class="skill-bar-fill" data-level="${skill.level / 100}"></div>
+      </div>
+    </li>
+  `).join("");
+
+  // Animate bars when scrolled into view
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll(".skill-bar-fill").forEach(bar => {
+          bar.style.transform = `scaleX(${bar.dataset.level})`;
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(list);
+}
+
+// ════════════════════════════════════════
+//  EVENT HANDLERS
+// ════════════════════════════════════════
+function handleCardClick(id) {
+  const project = projects.find(p => p.id === id);
+  if (!project) return;
+
+  // Conditional branching — WIP projects get a different message
+  if (project.status === "wip") {
+    alert(`"${project.title}" is still in progress — check back soon!`);
+  } else if (project.github) {
+    window.open(project.github, "_blank");
+  } else {
+    alert(`"${project.title}" — case study coming soon.`);
+  }
+}
+
+function resetFilter() {
+  activeFilter = "All";
+  renderFilters();
+  renderProjects();
+}
+
+// ════════════════════════════════════════
+//  INIT
+// ════════════════════════════════════════
+function init() {
+  renderStats();
+  renderFilters();
+  renderProjects();
+  renderSkills();
+}
+
+init();
+</script>
+</body>
+</html>
