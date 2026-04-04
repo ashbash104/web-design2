@@ -1,22 +1,153 @@
 <!DOCTYPE html>
 <html lang="en-us">
 	<head>
-		<meta charset="utf-8" />
-		<title>Site Plan</title>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Ashlee Hart — Portfolio</title>
+
+		<!-- Fonts: Syne (headings) + DM Mono (body) -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-		<link type="text/css" rel="stylesheet" href="site-plan.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="portfolio.css" />
+		<script src="portfolio.js" defer></script>
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />
 	</head>
 
 	<body>
+		<!-- ══════════════════════════════════════
+			HEADER
+		════════════════════════════════════════ -->
 		<header>
-			<h1>Portfolio</h1>
-			<h2>Ashlee Hart</h2>
-			<h2>WDD 131-A2</h2>
+		<div class="header-grid">
+			<div>
+			<p class="eyebrow">Portfolio — 2026</p>
+			<h1>Ashlee<span>Hart.</span></h1>
+			</div>
+			<div class="header-meta">
+			<div><span class="status-dot"></span>Available for work</div>
+			<div>San Francisco, CA</div>
+			<div>[email?]</div>
+			</div>
+		</div>
 		</header>
-		<main>
-        </main>
+
+		<!-- ══════════════════════════════════════
+			NAV
+		════════════════════════════════════════ -->
+		<nav class="site-nav">
+		<div class="nav-inner">
+			<a href="#projects">Projects</a>
+			<a href="#about">About</a>
+			<a href="#skills">Skills</a>
+			<a href="#contact">Contact</a>
+		</div>
+		</nav>
+
+		<!-- ══════════════════════════════════════
+			STATS BAR
+		════════════════════════════════════════ -->
+		<div class="stats-bar">
+		<div class="stats-inner">
+			<div class="stat">
+			<span class="stat-value" id="stat-total">0</span>
+			<span class="stat-label">Projects</span>
+			</div>
+			<div class="stat">
+			<span class="stat-value" id="stat-live">0</span>
+			<span class="stat-label">Live</span>
+			</div>
+			<div class="stat">
+			<span class="stat-value" id="stat-tags">0</span>
+			<span class="stat-label">Technologies</span>
+			</div>
+			<div class="stat">
+			<span class="stat-value" id="stat-years">0</span>
+			<span class="stat-label">Years Active</span>
+			</div>
+		</div>
+		</div>
+
+		<!-- ══════════════════════════════════════
+			FILTER BAR
+		════════════════════════════════════════ -->
+		<div class="filter-section" id="projects">
+		<div class="filter-inner">
+			<span class="filter-label">Filter //</span>
+			<div class="filter-tags" id="filter-tags"></div>
+			<span class="results-count" id="results-count"></span>
+		</div>
+		</div>
+		
+		<!-- ══════════════════════════════════════
+			ABOUT + SKILLS
+		════════════════════════════════════════ -->
+		<section class="about-section" id="about">
+		<div class="about-inner">
+			<div>
+			<p class="section-label">// About</p>
+			<img src="me.JPEG" alt="Ashlee Hart" class="about-pic" />
+			<p class="about-text">
+				I'm a software developer based in San Francisco, CA. As a Software Engineering major 
+				with an emphasis in software design, I specialize in collaboratively developing large-scale 
+				programs using C++, C#, and Python. My experience includes working with Linux cluster servers, 
+				automating manual tasks through Perl scripting, Developing within the Salesforce ecosystem, 
+				and developing programs in Python, Rust, C++, and HTML/JavaScript. With a minor in psychology, 
+				I excel at communicating complex ideas and thrive in diverse team environments. As an AI 
+				enthusiast, I am passionate about leveraging technology to solve real-world problems and am 
+				actively seeking employment opportunities in the San Francisco area.
+			</p>
+			<p class="about-text" style="margin-top: 1rem;">
+				Currently open to full-time roles.
+			</p>
+			</div>
+			<div id="skills">
+			<p class="section-label">// Skills</p>
+			<ul class="skill-list" id="skill-list"></ul>
+			</div>
+		</div>
+		</section>
+
+		<!-- ══════════════════════════════════════
+			PROJECT GRID
+		════════════════════════════════════════ -->
+		<main class="main">
+		<div class="project-grid" id="project-grid"></div>
+		</main>
+
+
+		<!-- ══════════════════════════════════════
+			CONTACT / SOCIAL
+		════════════════════════════════════════ -->
+		<section class="contact-section" id="contact">
+		<div class="contact-inner">
+			<p class="section-label">// Connect</p>
+			<h2 class="contact-heading">Let's work together.</h2>
+			<p class="contact-sub">Reach out via email or find me on these platforms:</p>
+			<div class="social-links">
+			<a href="https://github.com/ashbash104" target="_blank" class="social-btn">
+				<span class="social-icon">⌥</span> GitHub
+			</a>
+			<a href="https://www.linkedin.com/in/ashlee-hart/" target="_blank" class="social-btn">
+				<span class="social-icon">in</span> LinkedIn
+			</a>
+			<a href="mailto:ashlee.hart104@gmail.com" class="social-btn social-btn--accent">
+				<span class="social-icon">✉</span> Email Me
+			</a>
+			</div>
+		</div>
+		</section>
+
+		<!-- ══════════════════════════════════════
+			FOOTER
+		════════════════════════════════════════ -->
+		<footer>
+		<span>© 2025 Ashlee Hart</span>
+		<div class="footer-links">
+			<a href="https://github.com" target="_blank">GitHub</a>
+			<a href="https://linkedin.com" target="_blank">LinkedIn</a>
+			<a href="mailto:ashlee@ashleehartdev.com">Email</a>
+		</div>
+		</footer>
     </body>
 </html>
