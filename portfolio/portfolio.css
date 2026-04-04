@@ -4,6 +4,21 @@
    Fonts:   Syne (headings) · DM Mono (body)
 ════════════════════════════════════════════════════════════ */
 
+/* Prevent layout shift from font loading */
+@font-face {
+  font-family: 'Syne';
+  font-display: swap;
+  src: local('Syne');
+  size-adjust: 100%;
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  font-display: swap;
+  src: local('DM Mono');
+  size-adjust: 100%;
+}
+
 /* ── RESET ── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -741,6 +756,9 @@ body.modal-open { overflow: hidden; }
   clip: rect(0,0,0,0);
   white-space: nowrap;
   border: 0;
+}
+#project-grid {
+  min-height: 600px;
 }
 
 /* ── RESPONSIVE ── */

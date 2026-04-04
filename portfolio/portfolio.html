@@ -99,9 +99,19 @@
 			<div>
 			<p class="section-label">// About</p>
 			<picture>
-			<source srcset="me.webp" type="image/webp" />
-			<img src="me.JPEG" alt="Ashlee Hart, software developer based in San Francisco" 
-				class="about-pic" width="310" height="414" loading="lazy" />
+			<source 
+				srcset="me-310.webp 310w, me-620.webp 620w"
+				sizes="(max-width: 768px) 100vw, 310px"
+				type="image/webp" 
+			/>
+			<img 
+				src="me.JPEG" 
+				alt="Ashlee Hart, software developer based in San Francisco" 
+				class="about-pic" 
+				width="310" 
+				height="414" 
+				loading="lazy" 
+			/>
 			</picture>
 			<p class="about-text">
 				I'm a software developer based in San Francisco, CA. As a Software Engineering major 
@@ -167,7 +177,7 @@
 			<span class="card-year" id="modal-year"></span>
 			<span id="modal-status"></span>
 			</div>
-			<h2 class="modal-title" id="modal-title"></h2>
+			<h2 class="modal-title" id="modal-title" aria-label="Project details"></h2>
 			<p class="modal-desc" id="modal-desc"></p>
 			<div class="card-tags" id="modal-tags"></div>
 			<div class="modal-footer" id="modal-link"></div>
