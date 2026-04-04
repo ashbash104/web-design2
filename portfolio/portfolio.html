@@ -3,11 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="Ashlee Hart — Software Developer based in San Francisco, CA. Portfolio of projects in C++, Python, JavaScript, and more." />
         <title>Ashlee Hart — Portfolio</title>
 
 		<!-- Fonts: Syne (headings) + DM Mono (body) -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preload" as="image" href="me.JPEG" />
 		<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="portfolio.css" />
 		<script src="portfolio.js" defer></script>
@@ -34,7 +36,7 @@
 		<!-- ══════════════════════════════════════
 			NAV
 		════════════════════════════════════════ -->
-		<nav class="site-nav">
+		<nav class="site-nav" aria-label="Main navigation">
 		<div class="nav-inner">
 			<a href="#projects">Projects</a>
 			<a href="#about">About</a>
@@ -73,7 +75,7 @@
 		<div class="filter-section" id="projects">
 		<div class="filter-inner">
 			<span class="filter-label">Filter //</span>
-			<div class="filter-tags" id="filter-tags"></div>
+			<div class="filter-tags" id="filter-tags" role="group" aria-label="Filter projects by technology"></div>
 			<span class="results-count" id="results-count"></span>
 		</div>
 		</div>
@@ -82,7 +84,8 @@
 			PROJECT GRID
 		════════════════════════════════════════ -->
 		<main class="main">
-		<div class="project-grid" id="project-grid"></div>
+		  <h2 class="sr-only">Projects</h2>
+		  <div class="project-grid" id="project-grid"></div>
 		</main>
 
 		<!-- ══════════════════════════════════════
@@ -92,7 +95,7 @@
 		<div class="about-inner">
 			<div>
 			<p class="section-label">// About</p>
-			<img src="me.JPEG" alt="Ashlee Hart" class="about-pic" />
+			<img src="me.JPEG" alt="Ashlee Hart, software developer based in San Francisco" class="about-pic" width="310" height="310" />
 			<p class="about-text">
 				I'm a software developer based in San Francisco, CA. As a Software Engineering major 
 				with an emphasis in software design, I specialize in collaboratively developing large-scale 
@@ -123,10 +126,10 @@
 			<h2 class="contact-heading">Let's work together.</h2>
 			<p class="contact-sub">Reach out via email or find me on these platforms:</p>
 			<div class="social-links">
-			<a href="https://github.com/ashbash104" target="_blank" class="social-btn">
+			<a href="https://github.com/ashbash104" target="_blank" rel="noopener noreferrer" class="social-btn">
 				<span class="social-icon">⌥</span> GitHub
 			</a>
-			<a href="https://www.linkedin.com/in/ashlee-hart/" target="_blank" class="social-btn">
+			<a href="https://www.linkedin.com/in/ashlee-hart/" target="_blank" rel="noopener noreferrer" class="social-btn">
 				<span class="social-icon">in</span> LinkedIn
 			</a>
 			<a href="contact.html" class="social-btn social-btn--accent">
@@ -142,9 +145,9 @@
 		<footer>
 		<span>© 2025 Ashlee Hart</span>
 		<div class="footer-links">
-			<a href="https://github.com" target="_blank">GitHub</a>
-			<a href="https://linkedin.com" target="_blank">LinkedIn</a>
-			<a href="mailto:ashlee@ashleehartdev.com">Email</a>
+			<a href="https://github.com/ashbash104" target="_blank" rel="noopener noreferrer">GitHub</a>
+			<a href="https://www.linkedin.com/in/ashlee-hart/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+			<a href="mailto:ashlee.hart104@gmail.com" rel="noopener noreferrer">Email</a>
 		</div>
 		</footer>
 		<!-- ══════════════════════════════════════
