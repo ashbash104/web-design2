@@ -363,7 +363,7 @@ function renderRecipe(recipe) {
 }
 
 function init() {
-    renderRecipe(recipes[randomNum]);
+    recipes.forEach(recipe => renderRecipe(recipe));
 }
 
 init();
