@@ -5,12 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="description" content="Ashlee Hart — Software Developer based in San Francisco, CA. Portfolio of projects in C++, Python, JavaScript, and more." />
         <title>Ashlee Hart — Portfolio</title>
-
 		<!-- Fonts: Syne (headings) + DM Mono (body) -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="preload" as="image" href="me.JPEG" />
-		<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" media="print" onload="this.media='all'" />
+		<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" />
+		</noscript>
+		<link rel="preload" as="image" href="me.webp" />
 		<link type="text/css" rel="stylesheet" href="portfolio.css" />
 		<script src="portfolio.js" defer></script>
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -95,7 +98,11 @@
 		<div class="about-inner">
 			<div>
 			<p class="section-label">// About</p>
-			<img src="me.JPEG" alt="Ashlee Hart, software developer based in San Francisco" class="about-pic" width="310" height="310" />
+			<picture>
+			<source srcset="me.webp" type="image/webp" />
+			<img src="me.JPEG" alt="Ashlee Hart, software developer based in San Francisco" 
+				class="about-pic" width="310" height="414" loading="lazy" />
+			</picture>
 			<p class="about-text">
 				I'm a software developer based in San Francisco, CA. As a Software Engineering major 
 				with an emphasis in software design, I specialize in collaboratively developing large-scale 
@@ -154,7 +161,7 @@
 			PROJECT MODAL
 		════════════════════════════════════════ -->
 		<div class="modal-overlay" id="project-modal">
-		<div class="modal-card" role="dialog" aria-modal="true">
+		<div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
 			<button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
 			<div class="modal-header">
 			<span class="card-year" id="modal-year"></span>
