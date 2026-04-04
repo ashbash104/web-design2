@@ -29,7 +29,7 @@
     <main class="contact-page">
       <div class="contact-page-inner">
 
-        <p class="section-label">// Contact</p>
+        <!-- <p class="section-label">// Contact</p> -->
         <h1 class="contact-page-heading">Let's work together.</h1>
         <p class="contact-page-sub">
           Fill out the form below and I'll get back to you as soon as possible.
@@ -38,8 +38,8 @@
         <form class="contact-form" id="contact-form" novalidate>
 
           <div class="form-group">
-            <label for="from_name">Name</label>
-            <input type="text" id="from_name" name="from_name" placeholder="Jane Smith" required />
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
             <span class="field-error" id="error-name"></span>
           </div>
 
@@ -50,8 +50,8 @@
           </div>
 
           <div class="form-group">
-            <label for="reply_to">Email</label>
-            <input type="email" id="reply_to" name="reply_to" placeholder="jane@example.com" required />
+            <label for="from">Email</label>
+            <input type="email" id="from" name="from" placeholder="jane@example.com" required />
             <span class="field-error" id="error-email"></span>
           </div>
 
@@ -74,10 +74,12 @@
 
         <!-- SUCCESS STATE (hidden until sent) -->
         <div class="success-card" id="success-card" aria-live="polite">
-          <div class="success-icon">✓</div>
-          <h2 class="success-heading">Message received.</h2>
+          <div class="success-title">
+            <div class="success-icon">✓</div>
+            <h2 class="success-heading">Message received.</h2>
+          </div>
           <p class="success-body">
-            Thanks for reaching out! I'll get back to you at your email address within 1–2 business days.
+            Thanks for reaching out! I'll get back to you at your email address as soon as I can!
           </p>
           <a href="portfolio.html" class="submit-btn">← Back to Portfolio</a>
         </div>

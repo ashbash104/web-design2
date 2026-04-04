@@ -1,7 +1,7 @@
 // ── EMAILJS SETUP ──
 const EMAILJS_PUBLIC_KEY  = "oayOaqUy-Bc9dLJK9";
 const EMAILJS_SERVICE_ID  = "service_ss2kkh3";
-const EMAILJS_TEMPLATE_ID = "service_ss2kkh3";
+const EMAILJS_TEMPLATE_ID = "template_58tr1vz";
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
@@ -16,9 +16,9 @@ const successCard = document.getElementById("success-card");
 function validate() {
   let valid = true;
 
-  const name    = document.getElementById("from_name");
+  const name    = document.getElementById("name");
   const subject = document.getElementById("subject");
-  const email   = document.getElementById("reply_to");
+  const email   = document.getElementById("from");
   const message = document.getElementById("message");
 
   [name, email, subject, message].forEach(el => el.classList.remove("invalid"));
