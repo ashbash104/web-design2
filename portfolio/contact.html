@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact — Ashlee Hart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
+  <body>
+
+    <!-- NAV -->
+    <nav class="site-nav">
+      <div class="nav-inner">
+        <a href="portfolio.html">← Back</a>
+        <a href="portfolio.html#projects">Projects</a>
+        <a href="portfolio.html#about">About</a>
+        <a href="portfolio.html#skills">Skills</a>
+      </div>
+    </nav>
+
+    <!-- CONTACT FORM -->
+    <main class="contact-page">
+      <div class="contact-page-inner">
+
+        <p class="section-label">// Contact</p>
+        <h1 class="contact-page-heading">Let's work together.</h1>
+        <p class="contact-page-sub">
+          Fill out the form below and I'll get back to you as soon as possible.
+        </p>
+
+        <form class="contact-form" id="contact-form" novalidate>
+
+          <div class="form-group">
+            <label for="from_name">Name</label>
+            <input type="text" id="from_name" name="from_name" placeholder="Jane Smith" required />
+            <span class="field-error" id="error-name"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="reply_to">Email</label>
+            <input type="email" id="reply_to" name="reply_to" placeholder="jane@example.com" required />
+            <span class="field-error" id="error-email"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+            <span class="field-error" id="error-message"></span>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-btn">
+            <span id="btn-text">Send Message ↗</span>
+          </button>
+
+          <p class="form-status" id="form-status"></p>
+
+        </form>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <span>© 2025 Ashlee Hart</span>
+      <div class="footer-links">
+        <a href="https://github.com/ashbash104" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/ashlee-hart/" target="_blank">LinkedIn</a>
+      </div>
+    </footer>
+
+    <script src="contact.js"></script>
+  </body>
+</html>

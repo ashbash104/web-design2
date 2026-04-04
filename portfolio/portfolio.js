@@ -9,13 +9,13 @@ const projects = [
     tags: ["HTML", "CSS", "JavaScript"],
     year: 2025,
     status: "live",
-    github: "https://github.com"
+    github: "https://ashbash104.github.io/web-design2/portfolio/portfolio.html"
   },
   {
     id: 2,
     title: "Offtrack Storage CRM",
     description: "A responsive weather app that fetches live data from a public API. Displays current conditions, a 5-day forecast, and location search.",
-    tags: ["JavaScript", "CSS", "API"],
+    tags: ["TypeScript", "CSS", "API"],
     year: 2025,
     status: "live",
     github: "https://github.com/ashbash104/offtrack-storage-crm"
@@ -24,7 +24,7 @@ const projects = [
     id: 3,
     title: "Artillery Simulator",
     description: "Search and save recipes using the Spoonacular API. Includes dietary filters, ingredient-based search, and a favourites list stored in localStorage.",
-    tags: ["JavaScript", "HTML", "CSS"],
+    tags: ["C++"],
     year: 2024,
     status: "case",
     github: "https://github.com/ashbash104/ArtilleryFinalLab"
@@ -33,19 +33,19 @@ const projects = [
     id: 4,
     title: "STL Implementation",
     description: "A fully accessible task manager with drag-and-drop reordering, priority tagging, and persistent state via localStorage.",
-    tags: ["JavaScript", "CSS", "HTML"],
+    tags: ["C++"],
     year: 2024,
     status: "live",
     github: "https://github.com/ashbash104/STL_Implementation"
   },
   {
     id: 5,
-    title: "Quiz Game",
+    title: "Recipie Blog",
     description: "A timed trivia quiz pulling from the Open Trivia API. Tracks score, shows answer explanations, and stores a high-score leaderboard.",
-    tags: ["JavaScript", "API", "CSS"],
+    tags: ["JavaScript", "HTML", "CSS"],
     year: 2024,
     status: "case",
-    github: "https://github.com"
+    github: "https://ashbash104.github.io/web-design2/recipies/"
   },
   {
     id: 6,
@@ -61,10 +61,10 @@ const projects = [
 // Skills array of objects
 const skills = [
   { name: "Python", level: 80 },
-  { name: "C++", level: 80 },
+  { name: "C++", level: 65 },
   { name: "SQL", level: 80 },
   { name: "Git & Version Control", level: 80 },
-  { name: "AI/Machine Learning", level: 70 },
+  { name: "AI/Machine Learning", level: 65 },
   { name: "Prompt Engineering", level: 90 },
   { name: "Digital Logic Design", level: 70 },
   { name: "Software Lifecycle Management", level: 70 },

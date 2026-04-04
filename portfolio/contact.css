@@ -1,0 +1,121 @@
+/* ── CONTACT PAGE LAYOUT ── */
+.contact-page {
+  min-height: calc(100vh - 120px);
+  padding: 5rem 5vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.contact-page-inner {
+  width: 100%;
+  max-width: 620px;
+}
+
+.contact-page-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 0.75rem;
+}
+
+.contact-page-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+/* ── FORM ── */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-family: var(--font-body);
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 0.85rem 1rem;
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+  border-color: var(--accent-wip);
+}
+
+/* ── FIELD ERRORS ── */
+.field-error {
+  font-size: 0.68rem;
+  color: var(--accent-wip);
+  letter-spacing: 0.05em;
+  min-height: 1em;
+}
+
+/* ── SUBMIT BUTTON ── */
+.submit-btn {
+  align-self: flex-start;
+  background-color: var(--accent);
+  color: var(--text-on-accent);
+  border: none;
+  padding: 0.85rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.submit-btn:hover { background-color: var(--swatch-manilla); }
+.submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── STATUS MESSAGE ── */
+.form-status {
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  min-height: 1.2em;
+}
+
+.form-status.success { color: var(--accent-live); }
+.form-status.error   { color: var(--accent-wip); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 480px) {
+  .submit-btn { width: 100%; text-align: center; }
+}
