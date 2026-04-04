@@ -18,6 +18,7 @@ function validate() {
   const name    = document.getElementById("from_name");
   const email   = document.getElementById("reply_to");
   const message = document.getElementById("message");
+  const subject = document.getElementById("subject");
 
   // Reset
   [name, email, message].forEach(el => el.classList.remove("invalid"));
