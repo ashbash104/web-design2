@@ -5,7 +5,8 @@ const projects = [
   {
     id: 1,
     title: "Portfolio Site",
-    description: "This portfolio! Built with semantic HTML, CSS custom properties, and vanilla JavaScript. Includes dynamic filtering, scroll animations, and a responsive layout.",
+    description: "Built with semantic HTML, CSS custom properties, and vanilla JS.",
+    longDescription: "This portfolio! Built with semantic HTML, CSS custom properties, and vanilla JavaScript. Includes dynamic filtering, scroll animations, a sticky nav system, a contact form powered by EmailJS, and a fully responsive layout designed from scratch without any frameworks.",
     tags: ["HTML", "CSS", "JavaScript"],
     year: 2025,
     status: "live",
@@ -14,7 +15,8 @@ const projects = [
   {
     id: 2,
     title: "Offtrack Storage CRM",
-    description: "A responsive weather app that fetches live data from a public API. Displays current conditions, a 5-day forecast, and location search.",
+    description: "A CRM built for a storage business with live data and location search.",
+    longDescription: "A responsive CRM application built for a real storage business. Fetches and displays live unit data, handles customer management, and includes location-based search. Built with TypeScript and custom CSS with a focus on usability and business logic implementation.",
     tags: ["TypeScript", "CSS", "API"],
     year: 2025,
     status: "live",
@@ -23,7 +25,8 @@ const projects = [
   {
     id: 3,
     title: "Artillery Simulator",
-    description: "Search and save recipes using the Spoonacular API. Includes dietary filters, ingredient-based search, and a favourites list stored in localStorage.",
+    description: "A physics-based artillery simulator written in C++.",
+    longDescription: "A physics-based artillery simulator implementing projectile motion, drag, and gravity calculations in C++. Demonstrates object-oriented design principles, mathematical modeling, and simulation logic. Built as a capstone lab for an advanced C++ course.",
     tags: ["C++"],
     year: 2024,
     status: "case",
@@ -32,7 +35,8 @@ const projects = [
   {
     id: 4,
     title: "STL Implementation",
-    description: "A fully accessible task manager with drag-and-drop reordering, priority tagging, and persistent state via localStorage.",
+    description: "A ground-up reimplementation of core C++ STL containers.",
+    longDescription: "A ground-up reimplementation of core C++ Standard Template Library containers including vector, list, and map. Focuses on memory management, iterator design, and algorithmic efficiency. Built to deeply understand the internals of the STL.",
     tags: ["C++"],
     year: 2024,
     status: "live",
@@ -40,8 +44,9 @@ const projects = [
   },
   {
     id: 5,
-    title: "Recipie Blog",
-    description: "A timed trivia quiz pulling from the Open Trivia API. Tracks score, shows answer explanations, and stores a high-score leaderboard.",
+    title: "Recipe Blog",
+    description: "A recipe blog with dynamic rendering and category filtering.",
+    longDescription: "A recipe blog built with vanilla JavaScript, HTML, and CSS. Features dynamic card rendering from a data array, category-based filtering, and a clean readable layout. Demonstrates DOM manipulation, event handling, and responsive design without any frameworks.",
     tags: ["JavaScript", "HTML", "CSS"],
     year: 2024,
     status: "case",
@@ -50,7 +55,8 @@ const projects = [
   {
     id: 6,
     title: "Blog CMS",
-    description: "A lightweight content management interface. Supports markdown authoring, image uploads, and a tag-based post filter. Currently in active development.",
+    description: "A lightweight CMS with markdown authoring and tag filtering.",
+    longDescription: "A lightweight content management interface currently in active development. Supports markdown authoring, image uploads, and a tag-based post filter. Designed to be self-hostable and easy to extend. Stack is vanilla JavaScript, HTML, and CSS.",
     tags: ["JavaScript", "HTML", "CSS"],
     year: 2025,
     status: "wip",
@@ -187,9 +193,6 @@ function renderProjects() {
   grid.innerHTML = filtered.map((project, index) => {
     const { label, cssClass } = getStatusInfo(project.status);
     const tagHTML = project.tags.map(t => `<span class="card-tag">${t}</span>`).join("");
-    const githubBtn = project.github
-      ? `<a href="${project.github}" target="_blank" class="card-github" onclick="event.stopPropagation()">View on GitHub ↗</a>`
-      : `<span class="card-github card-github--disabled">Repo coming soon</span>`;
 
     return `
       <div class="project-card" style="animation-delay:${index * 60}ms" data-id="${project.id}">
@@ -200,7 +203,9 @@ function renderProjects() {
         <h2 class="card-title">${project.title}</h2>
         <p class="card-desc">${project.description}</p>
         <div class="card-tags">${tagHTML}</div>
-        <div class="card-footer">${githubBtn}</div>
+        <div class="card-footer">
+          <span class="card-read-more">Read more ↗</span>
+        </div>
         <span class="card-arrow">↗</span>
       </div>`;
   }).join("");
@@ -251,15 +256,7 @@ function renderSkills() {
 function handleCardClick(id) {
   const project = projects.find(p => p.id === id);
   if (!project) return;
-
-  // Conditional branching — WIP projects get a different message
-  if (project.status === "wip") {
-    alert(`"${project.title}" is still in progress — check back soon!`);
-  } else if (project.github) {
-    window.open(project.github, "_blank");
-  } else {
-    alert(`"${project.title}" — case study coming soon.`);
-  }
+  openModal(project);
 }
 
 function resetFilter() {
@@ -267,6 +264,44 @@ function resetFilter() {
   renderFilters();
   renderProjects();
 }
+
+// ════════════════════════════════════════
+//  MODAL
+// ════════════════════════════════════════
+function openModal(project) {
+  const { label, cssClass } = getStatusInfo(project.status);
+  const tagHTML = project.tags.map(t => `<span class="card-tag">${t}</span>`).join("");
+  const githubBtn = project.github
+    ? `<a href="${project.github}" target="_blank" class="modal-github">View on GitHub ↗</a>`
+    : `<span class="modal-github modal-github--disabled">Repo coming soon</span>`;
+
+  document.getElementById("modal-year").textContent = project.year;
+  document.getElementById("modal-status").textContent = label;
+  document.getElementById("modal-status").className = `card-status ${cssClass}`;
+  document.getElementById("modal-title").textContent = project.title;
+  document.getElementById("modal-desc").textContent = project.longDescription;
+  document.getElementById("modal-tags").innerHTML = tagHTML;
+  document.getElementById("modal-link").innerHTML = githubBtn;
+
+  const overlay = document.getElementById("project-modal");
+  overlay.classList.add("visible");
+  document.body.classList.add("modal-open");
+}
+
+function closeModal() {
+  document.getElementById("project-modal").classList.remove("visible");
+  document.body.classList.remove("modal-open");
+}
+
+// Close on overlay click
+document.getElementById("project-modal").addEventListener("click", function (e) {
+  if (e.target === this) closeModal();
+});
+
+// Close on Escape key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") closeModal();
+});
 
 // ════════════════════════════════════════
 //  INIT
