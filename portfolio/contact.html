@@ -45,7 +45,8 @@
 
           <div class="form-group">
             <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Your Subject" required />
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry, collaboration, etc." required />
+            <span class="field-error" id="error-subject"></span>
           </div>
 
           <div class="form-group">
@@ -60,11 +61,26 @@
             <span class="field-error" id="error-message"></span>
           </div>
 
-          <button type="submit" class="submit-btn" id="submit-btn">
-            <span id="btn-text">Send Message ↗</span>
-          </button>
+          <div class="form-actions">
+            <button type="submit" class="submit-btn" id="submit-btn">
+              <span id="btn-text">Send Message ↗</span>
+            </button>
+            <a href="portfolio.html" class="back-btn">← Back to Portfolio</a>
+          </div>
 
           <p class="form-status" id="form-status"></p>
+
+        </form>
+
+        <!-- SUCCESS STATE (hidden until sent) -->
+        <div class="success-card" id="success-card" aria-live="polite">
+          <div class="success-icon">✓</div>
+          <h2 class="success-heading">Message received.</h2>
+          <p class="success-body">
+            Thanks for reaching out! I'll get back to you at your email address within 1–2 business days.
+          </p>
+          <a href="portfolio.html" class="submit-btn">← Back to Portfolio</a>
+        </div>
 
         </form>
       </div>

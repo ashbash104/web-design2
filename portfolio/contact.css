@@ -119,3 +119,68 @@
 @media (max-width: 480px) {
   .submit-btn { width: 100%; text-align: center; }
 }
+
+/* ── FORM ACTIONS ROW ── */
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.back-btn {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+
+.back-btn:hover { color: var(--accent); }
+
+/* ── SUCCESS CARD ── */
+.success-card {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-top: 1rem;
+  padding: 2.5rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 2px;
+  animation: cardIn 0.4s ease both;
+}
+
+.success-card.visible {
+  display: flex;
+}
+
+.success-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(188, 209, 202, 0.12);
+  color: var(--accent-live);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--accent-live);
+}
+
+.success-heading {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.success-body {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 420px;
+}
